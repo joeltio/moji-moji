@@ -1,9 +1,11 @@
 import React from "react";
 
+import styles from "./stats.scss";
+
 export default class Stats extends React.Component {
     render() {
         return (
-            <div><p style={{fontFamily: 'arista2alternate'}}>Stats</p></div>
+            <div>Stats</div>
         );
     }
 }
