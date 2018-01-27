@@ -18,7 +18,7 @@ export default class Layout extends React.Component {
             <div>
                 <Route exact path="/" component={Stats}></Route>
                 <Route path="/send" component={Send}></Route>
-                <Route path="/receive" component={Receive}></Route>
+                <Route path="/receive/:id" component={Receive}></Route>
             </div>
         );
     }

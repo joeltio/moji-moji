@@ -1,6 +1,7 @@
 import React from "react";
 
 import EmojiBox from "../EmojiBox/EmojiBox";
+import LinkButton from "../LinkButton/LinkButton";
 
 import styles from "./emojiTable.scss";
 
@@ -12,6 +13,7 @@ export default class EmojiTable extends React.Component {
         };
         return (
             <div className={styles.container}>
+                <LinkButton to="" text="Home" />
                 {rows}
             </div>
         );

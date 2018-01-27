@@ -1,7 +1,7 @@
 import React from "react";
 
 import EmojiCount from "../EmojiCount/EmojiCount";
-import GiveButton from "../../components/GiveButton/GiveButton";
+import LinkButton from "../../components/LinkButton/LinkButton";
 
 import styles from "./emojiCountTable.scss";
 
@@ -14,7 +14,7 @@ export default class EmojiCountTable extends React.Component {
 
         return (
             <div className={styles.container}>
-                <GiveButton />
+                <LinkButton to="send" text="Give" />
                 {rows}
             </div>
         );

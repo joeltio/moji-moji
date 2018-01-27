@@ -12,7 +12,8 @@ export default class Stats extends React.Component {
         if (localStorage.getItem("moji-moji") === null) {
             const account = {
                 "uuid": uuidv4(),
-                "emojis": {}
+                "emojis": {},
+                "pastEmojis": []
             }
             localStorage.setItem("moji-moji", JSON.stringify(account))
         }
