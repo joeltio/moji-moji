@@ -10,7 +10,6 @@ const uuidv4 = require('uuid/v4');
 export default class Receive extends React.Component {
     render() {
         const data = this.props.match.params.id;
-        console.log(data);
         var [senderUuid, emojiUuid, emoji] = data.split(" ");
 
         if (localStorage.getItem("moji-moji") === null) {
@@ -24,15 +23,11 @@ export default class Receive extends React.Component {
         const { uuid, pastEmojis } = JSON.parse(localStorage.getItem("moji-moji"));
 
         var invalid = false;
-        console.log(pastEmojis);
         if (pastEmojis.indexOf(data) > -1) {
             invalid = true;
-            console.log("there");
         } else if (emojiUuid.length != 36 || senderUuid.length != 36) {
             invalid = true;
-            console.log("here");
         } else if (senderUuid === uuid) {
-            console.log("everywhere");
             invalid = true;
         }
 
@@ -42,6 +37,9 @@ export default class Receive extends React.Component {
         } else {
             var account = JSON.parse(localStorage.getItem("moji-moji"));
             account["pastEmojis"].push(data);
+            if (account["emojis"][emoji] === undefined) {
+                account["emojis"][emoji] = 0;
+            }
             account["emojis"][emoji] += 1;
             localStorage.setItem("moji-moji", JSON.stringify(account));
             toRender = (

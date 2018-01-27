@@ -15,7 +15,6 @@ export default class EmojiButton extends React.Component {
     copyLinkToBoard(event) {
         const new_link = this.getCurrentUuid() + " " + uuidv4() + " " + this.props.emoji;
         copy(encodeURIComponent(new_link));
-        console.log("copied");
     }
 
     render() {
