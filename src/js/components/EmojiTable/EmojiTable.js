@@ -1,6 +1,7 @@
 import React from "react";
 
 import EmojiCount from "../EmojiCount/EmojiCount";
+import GiveButton from "../../components/GiveButton/GiveButton";
 
 import styles from "./emojiTable.scss";
 
@@ -13,6 +14,7 @@ export default class EmojiTable extends React.Component {
 
         return (
             <div className={styles.container}>
+                <GiveButton />
                 {rows}
             </div>
         );
