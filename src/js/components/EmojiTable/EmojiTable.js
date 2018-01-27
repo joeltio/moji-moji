@@ -7,7 +7,6 @@ import styles from "./emojiTable.scss";
 export default class EmojiTable extends React.Component {
     render() {
         var rows = [];
-        console.log(this.props.emojis);
         for (let emoji of this.props.emojis) {
             rows.push(<EmojiBox key={emoji} emoji={emoji} />);
         };
