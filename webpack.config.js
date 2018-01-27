@@ -40,9 +40,17 @@ module.exports = {
                     'css-loader?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]',
                     'sass-loader'
                 ]
-            }
+            },
+            {
+                test: /\.(ttf|eot|woff|woff2)$/,
+                loader: "file-loader",
+                options: {
+                    name: "fonts/[name].[ext]",
+                },
+            },
         ]
     },
+
     plugins: debug ? [] : [
         new webpack.optimize.OccurrenceOrderPlugin(),
         new webpack.optimize.UglifyJsPlugin({ mangle: false, soucemap: false })
