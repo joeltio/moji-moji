@@ -13,8 +13,8 @@ export default class EmojiButton extends React.Component {
     }
 
     copyLinkToBoard(event) {
-        const new_link = "https://joeltio.github.io/moji-moji/#/receive/" + this.getCurrentUuid() + " " + uuidv4() + " " + this.props.emoji;
-        copy(encodeURIComponent(new_link));
+        const new_link = this.getCurrentUuid() + " " + uuidv4() + " " + this.props.emoji;
+        copy("https://joeltio.github.io/moji-moji/#/receive/" + encodeURIComponent(new_link));
     }
 
     render() {
