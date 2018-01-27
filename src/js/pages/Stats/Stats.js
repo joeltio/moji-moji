@@ -1,11 +1,12 @@
 import React from "react";
 
-import styles from "./stats.scss";
+import EmojiCount from "../../components/EmojiCount/EmojiCount";
 
 export default class Stats extends React.Component {
     render() {
         return (
-            <div>Stats</div>
+            <div>
+            </div>
         );
     }
 }

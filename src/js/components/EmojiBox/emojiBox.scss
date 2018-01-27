@@ -1,0 +1,13 @@
+$box_dimen: 90px;
+$top_offset: 10px;
+
+.container {
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: $box_dimen - $top_offset;
+    width: $box_dimen;
+    border-radius: 15%;
+    padding-top: $top_offset;
+    vertical-align: middle;
+}
