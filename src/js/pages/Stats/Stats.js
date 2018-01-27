@@ -1,7 +1,7 @@
 import React from "react";
 
 import Header from "../../components/Header/Header";
-import EmojiTable from "../../components/EmojiTable/EmojiTable";
+import EmojiCountTable from "../../components/EmojiCountTable/EmojiCountTable";
 
 import styles from "./stats.scss";
 
@@ -36,7 +36,7 @@ export default class Stats extends React.Component {
         return (
             <div className={styles.container}>
                 <Header text={phrase}/>
-                <EmojiTable emojis={emojis}/>
+                <EmojiCountTable emojis={emojis}/>
             </div>
         );
     }

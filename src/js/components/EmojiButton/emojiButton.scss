@@ -1,0 +1,16 @@
+$box_dimen: 90px;
+$top_offset: 10px;
+
+.container {
+    display: inline-block;
+    background-color: #BF40FF;
+    text-align: center;
+    height: $box_dimen - $top_offset;
+    width: $box_dimen;
+    border-radius: 15%;
+    padding-top: $top_offset;
+    vertical-align: middle;
+    margin: 5px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
