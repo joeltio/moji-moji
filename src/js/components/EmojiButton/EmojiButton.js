@@ -27,7 +27,7 @@ export default class EmojiButton extends React.Component {
         this.setState({emoji: (<p>{text}</p>)})
         window.setTimeout(function() {
             this.setState({emoji: <Emoji emoji={this.props.emoji} />})
-        }.bind(this), 1000);
+        }.bind(this), 300);
     }
 
     render() {
