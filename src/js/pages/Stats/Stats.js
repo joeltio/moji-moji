@@ -23,15 +23,15 @@ export default class Stats extends React.Component {
 
         var phrase;
         if (num_emojis == 0) {
-            phrase = "nothing here yet, go get some emojis!";
+            phrase = "Give an emoji, get one in return?";
         } else if (num_emojis < 10) {
-            phrase = "you seem lonely";
+            phrase = "You seem lonely";
         } else if (num_emojis < 100) {
             phrase = "😐👌";
         } else if (num_emojis == 100) {
             phrase = "💯💯💯";
         } else {
-            phrase = "you're 🔥🔥🔥";
+            phrase = "You're 🔥🔥🔥";
         }
 
         return (
