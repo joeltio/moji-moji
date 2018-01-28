@@ -7,7 +7,7 @@ export default class LongButton extends React.Component {
     render() {
         return (
             <div className={styles.container}>
-                <h2 className={styles.text} >{this.props.text}</h2>
+                <h2 className={styles.text}>{this.props.text}</h2>
             </div>
         );
     }
