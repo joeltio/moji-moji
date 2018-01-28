@@ -8,6 +8,11 @@ import styles from "./receive.scss";
 
 const uuidv4 = require('uuid/v4');
 export default class Receive extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {redirect: null};
+    }
+
     render() {
         const data = this.props.match.params.id;
         var [senderUuid, emojiUuid, emoji] = data.split(" ");
@@ -47,9 +52,14 @@ export default class Receive extends React.Component {
                     <Header text="you got" />
                     <Emoji emoji={emoji}/>
                     <Header text="!!!" />
+                    {this.state.redirect}
                 </div>
             );
         }
+
+        window.setTimeout(function() {
+            this.setState({redirect: (<Redirect to="/" />)})
+        }.bind(this), 3000);
 
         return toRender;
     }
