@@ -28,7 +28,7 @@ export default class Receive extends React.Component {
         const { uuid, pastEmojis } = JSON.parse(localStorage.getItem("moji-moji"));
 
         var invalid = false;
-        if (pastEmojis.indexOf(data) > -1) {
+        if (pastEmojis.indexOf(senderUuid + emojiUuid) > -1) {
             invalid = true;
         } else if (emojiUuid.length != 36 || senderUuid.length != 36) {
             invalid = true;
@@ -41,7 +41,9 @@ export default class Receive extends React.Component {
             toRender = (<Redirect to="/" />);
         } else {
             var account = JSON.parse(localStorage.getItem("moji-moji"));
-            account["pastEmojis"].push(data);
+            console.log(senderUuid);
+            console.log(emojiUuid);
+            account["pastEmojis"].push(senderUuid + emojiUuid);
             if (account["emojis"][emoji] === undefined) {
                 account["emojis"][emoji] = 0;
             }
